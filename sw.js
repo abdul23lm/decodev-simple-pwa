@@ -1,5 +1,5 @@
 var CACHE_NAME = "decodev-cache-v1";
-var urlsToCache = ["/", "/index.html"];
+var urlsToCache = ["/", "/index.html", "/page.html"];
 
 self.addEventListener("install", function (event) {
   // Perform install steps
