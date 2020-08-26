@@ -1,0 +1,22 @@
+{
+  "short_name": "Decodev",
+  "name": "Decodev Simple PWA",
+  "icons": [
+    {
+      "src": "/images/icons-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/images/icons-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/index.html",
+  "background_color": "#05202B",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#3367D6",
+  "orientation": "portrait"
+}
