@@ -1,5 +1,5 @@
 var CACHE_NAME = "decodev-cache-v1";
-var urlsToCache = ["/", "/index.html", "/offline.html"];
+var urlsToCache = ["/", "index.html", "offline.html"];
 
 self.addEventListener("install", function (event) {
   // Perform install steps
@@ -46,7 +46,7 @@ self.addEventListener("fetch", function (event) {
       })
       .catch(function () {
         // If both fail, show a generic fallback:
-        return caches.match("/offline.html");
+        return caches.match("offline.html");
         // However, in reality you'd have many different
         // fallbacks, depending on URL & headers.
         // Eg, a fallback silhouette image for avatars.
@@ -55,13 +55,13 @@ self.addEventListener("fetch", function (event) {
 });
 
 self.addEventListener("activate", function (event) {
-  var cacheWhitelist = CACHE_NAME;
+  var cacheAllowlist = CACHE_NAME;
 
   event.waitUntil(
     caches.keys().then(function (cacheNames) {
       return Promise.all(
         cacheNames.map(function (cacheName) {
-          if (cacheWhitelist.indexOf(cacheName) === -1) {
+          if (cacheAllowlist.indexOf(cacheName) === -1) {
             return caches.delete(cacheName);
           }
         })
