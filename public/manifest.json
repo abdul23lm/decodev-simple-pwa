@@ -2,11 +2,7 @@
   "short_name": "Decodev",
   "name": "Decodev Simple PWA",
   "icons": [
-    {
-      "src": "images/decodev_192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
+
     {
       "src": "images/decodev_512.png",
       "type": "image/png",
